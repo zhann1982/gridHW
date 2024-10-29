@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./fonts/static/Montserrat-Regular.ttf);
+}
+
+body {
+    background-color: #41005f;
+}
+
+.container {
+    max-width: 1920px;
+    background-color: #fff;
+    margin-inline: auto;
+
+    position: relative;
+
+    .blurred {
+        
+    }
+
+    .blurred:nth-child(3) {
+        position: absolute;
+        top: 120px;
+    }
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: -1px;
+    text-align: center;
+
+}
+
+.product-cards {
+    max-width: 1180px;
+    margin-inline: auto;
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    .product-cards__card {
+        width: 380px;
+        border: 1px solid #F2F6FA;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        padding-bottom: 50px;
+
+        .product-cards__card__image {
+            width: 380px;
+            margin-bottom: 50px;
+        }
+
+        .product-cards__card__title {
+            margin-left: 44px;        
+        } 
+
+        .product-cards__card__description {
+            margin-left: 44px;   
+            width: 240px;     
+        }
+
+        .product-cards__card__price {
+            margin-left: 44px;        
+        }
+
+        .product-cards__card__button {
+            margin-left: 44px;        
+        }
+    }
+}
+
