@@ -1,37 +1,60 @@
 @font-face {
     font-family: Montserrat;
-    src: url(./fonts/static/Montserrat-Regular.ttf);
+    src: url(./fonts/static/Montserrat-Medium.ttf);
 }
 
 body {
     background-color: #41005f;
+    color: #2E363E;
+    font-family: Montserrat;
 }
 
 .container {
     max-width: 1920px;
-    background-color: #fff;
+    background-color: #fdfdfd;
     margin-inline: auto;
 
     position: relative;
 
-    .blurred {
-        
-    }
-
+    /* Добавляем размазанные картинки малины и двух листиков
+    И распологаем их относительно главного контейнера */
     .blurred:nth-child(3) {
         position: absolute;
-        top: 120px;
+        top: 238px;
+        left: 238px;
+
+        width: 180px;
+        filter: blur(7px);
+        rotate: -60deg;
+    }
+
+    .blurred:nth-child(4) {
+        position: absolute;
+        top: 1124px;
+        right: 238px;
+
+        width: 161px;
+        filter: blur(11px);
+        rotate: 180deg;
+    }
+
+    .blurred:nth-child(5) {
+        position: absolute;
+        top: 1484px;
+        left: 253px;
+
+        width: 119px;
+        filter: blur(11px);
+        rotate: 95deg;
     }
 }
 
 h1 {
-    font-family: Montserrat;
     font-size: 48px;
     font-weight: 500;
     line-height: 60px;
     letter-spacing: -1px;
     text-align: center;
-
 }
 
 .product-cards {
@@ -41,15 +64,13 @@ h1 {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
     grid-gap: 20px;
 
     .product-cards__card {
         width: 380px;
         border: 1px solid #F2F6FA;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-
+        border-radius: 10px;
         padding-bottom: 50px;
 
         .product-cards__card__image {
@@ -58,20 +79,43 @@ h1 {
         }
 
         .product-cards__card__title {
-            margin-left: 44px;        
+            margin-left: 44px; 
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 34.32px;
+       
         } 
 
         .product-cards__card__description {
             margin-left: 44px;   
-            width: 240px;     
+            width: 247px; 
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+    
         }
 
         .product-cards__card__price {
-            margin-left: 44px;        
+            margin-left: 44px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 36px;
+        
         }
 
         .product-cards__card__button {
-            margin-left: 44px;        
+            margin-left: 44px;   
+            width: 163px;
+            height: 68px;
+            border-radius: 8px;     
+            background-color: #FED84C;
+            outline: 0;
+            border: 0;
+
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27.36px;
+            text-align: center;
         }
     }
 }
